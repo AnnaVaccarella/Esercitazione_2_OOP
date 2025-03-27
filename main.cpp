@@ -48,3 +48,23 @@ bool operator==(const complex_number& other) const {
 	return real == other.real && imag ==other.imag;
 }
 };
+//Funzione main per il test 
+int main() {
+	complex_number<double> n1(1.0, 2.0); //Numero complesso 1+2i
+	complex_number<double> n2(5.0, 3.0); //Numero complesso 5+3i
+	
+	std::cout << "Numero complesso 1: " << n1 << std::endl;
+	std::cout << "Numero complesso 2: " << n2 << std::endl;
+	
+//Somma
+complex_number<double> somma = n1 + n2;
+std::cout << "Somma: " << somma << std::endl;
+//Moltiplicazione
+complex_number<double> prodotto = n1 * n2;
+std::cout << "Prodotto: " << prodotto << std::endl;
+//Coniugato di n1
+complex_number<double> coniugato = n1.conjugate();
+std::cout << "Coniugato di n1: " << coniugato << std::endl;
+
+return 0;
+}
