@@ -24,5 +24,28 @@ public:
     complex_number conjugate() const {
         return complex_number(real, -imag);
     }
+	//Overload dell'operatore <<
+friend std::ostream& operator<<(std::ostream& os, const complex_number& c)}
+	if (c.imag >= 0)
+		os << c.real << "+" << c.imag << "i" ;
+	else
+		os << c.real << "-" << -c.imag << "i" ;
+	return os;
+}
+//Overload dell'operatore +
+complex_number operator+(const complex_number& other) other const {
+	return complex_number(real + other.real, imag + other.imag);
+}
+//Overload sull'operatore *
+complex_number operator*(const complex_number& other) const {
+	return complex_number(
+	real * other.real - imag * other.imag,
+	real * other.imag + imag * other.real
+	);
+}
+//Overload per l'operatore ==
+bool operator==(const complex_number& other) const {
+	return real == other.real && imag ==other.imag;
+}
+};
 
-	
