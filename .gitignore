@@ -1,4 +1,0 @@
-#Ignora cartella Debug
-/Debug/
-#Ignora certi tipi di file
-*.md
